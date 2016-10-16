@@ -24,12 +24,22 @@
 - Voltage regulator to bring down 5V input to 3.3V for electronics. Should have decoupling capacitors to smooth the supply.
  
 - Photoresistor to detect the amount of light for use as a trigger.
-- Ability to configure light based alarm. Five minute response time is sufficient.
+-- Ability to configure light based alarm. Five minute response time is sufficient.
+
+- Temperature sensor. Can use the temperature sensor inside the TCXO RTC, which can be good enough.
  
 - Real Time Clock with a temperature compensated crystal oscillator (TCXO).
-- Real Time Clock with sub 0C and very high temperature range with high accuracy.
-- Ability to set the timezone on the RTC.
-- Ability to push time from Wi-Fi connected device onto the MCU to update the RTC.
+-- Real Time Clock with sub 0C and very high temperature range with high accuracy.
+-- Ability to set the timezone on the RTC.
+-- Ability to push time from Wi-Fi connected device onto the MCU to update the RTC.
+
+- Record the last X number of light and temperature readings along with when the power was turned on and off, and the timestamp.
+-- Option to set the frequency of saving of readings.
+-- Option to save X number of samples or to record until there is still memory available.
+-- Option to cycle through the available memory or just stop recording when full.
+-- Option to reset the samples by clearing the cache.
+-- Option to visualize the data in a chart on the web interface.
+-- Option to download the data to a Wi-Fi connected web client.
  
 ---------------
 ## LED
