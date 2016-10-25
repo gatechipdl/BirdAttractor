@@ -625,9 +625,9 @@ Text GLabel 7500 1050 0    60   Input ~ 0
 RX33
 Text GLabel 1475 3025 1    60   Input ~ 0
 MCU_RESET
-Text GLabel 5100 3700 2    60   Input ~ 0
+Text GLabel 4250 4350 3    60   Input ~ 0
 RELAY_ON33
-Text GLabel 5100 3550 2    60   Input ~ 0
+Text GLabel 4400 4350 3    60   Input ~ 0
 RELAY_OFF33
 Wire Wire Line
 	3550 3400 3600 3400
@@ -654,14 +654,14 @@ Text GLabel 6725 4775 0    60   Input ~ 0
 RELAY_ON33
 Text GLabel 7325 4775 2    60   Input ~ 0
 RELAY_ON
-Text GLabel 6775 2750 1    60   Input ~ 0
+Text GLabel 6775 2700 1    60   Input ~ 0
 V33
 Text GLabel 7275 3150 1    60   Input ~ 0
 5V_IN
 Wire Wire Line
 	6775 3100 6775 3200
 Wire Wire Line
-	6775 3150 6975 3150
+	6675 3150 6975 3150
 Wire Wire Line
 	6975 3150 6975 3250
 Connection ~ 6775 3150
@@ -840,7 +840,7 @@ $EndComp
 Text GLabel 2350 3125 3    60   Input ~ 0
 GND
 Wire Wire Line
-	2100 2775 2100 2675
+	2100 2675 2100 2775
 Wire Wire Line
 	2100 2375 2100 2325
 Wire Wire Line
@@ -865,5 +865,36 @@ F 3 "" H 6775 2950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6775 2750 6775 2800
+	6775 2700 6775 2800
+Wire Wire Line
+	6675 3150 6675 2750
+Wire Wire Line
+	6675 2750 6775 2750
+Connection ~ 6775 2750
+$Comp
+L R R21
+U 1 1 580EDD4C
+P 5250 3550
+F 0 "R21" V 5330 3550 50  0000 C CNN
+F 1 "10K" V 5250 3550 50  0000 C CNN
+F 2 "Capacitors_SMD:C_1206" V 5180 3550 50  0001 C CNN
+F 3 "" H 5250 3550 50  0000 C CNN
+	1    5250 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R22
+U 1 1 580EE266
+P 5250 3700
+F 0 "R22" V 5330 3700 50  0000 C CNN
+F 1 "10K" V 5250 3700 50  0000 C CNN
+F 2 "Capacitors_SMD:C_1206" V 5180 3700 50  0001 C CNN
+F 3 "" H 5250 3700 50  0000 C CNN
+	1    5250 3700
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5400 3700 2    60   Input ~ 0
+GND
+Text GLabel 5400 3550 2    60   Input ~ 0
+V33
 $EndSCHEMATC

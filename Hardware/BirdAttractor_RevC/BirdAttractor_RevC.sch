@@ -29,18 +29,18 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:myParts
-LIBS:BirdAttractor_RevB-cache
+LIBS:BirdAttractor_RevC-cache
 EELAYER 25 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Bird Attractor"
-Date "2016-01-30"
-Rev "A"
-Comp "MITTO DESIGN LLC"
-Comment1 "Matthew Swarts"
-Comment2 "Rachel LeRoy"
+Date "2016-10-24"
+Rev "C"
+Comp "Matthew Swarts and Racel LeRoy"
+Comment1 "MIT License"
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -140,7 +140,7 @@ U 1 1 57FE5F0C
 P 2100 3425
 F 0 "SW1" H 2250 3535 50  0000 C CNN
 F 1 "SW_PUSH" H 2100 3345 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_PTS645" H 2100 3425 50  0001 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 2100 3425 50  0001 C CNN
 F 3 "" H 2100 3425 50  0000 C CNN
 	1    2100 3425
 	0    1    1    0   
@@ -184,28 +184,6 @@ F 1 "Photores" V 5535 1225 50  0000 C TNN
 F 2 "LEDs:LED-5MM" V 5255 1225 50  0001 C CNN
 F 3 "" H 5325 1225 50  0000 C CNN
 	1    5325 1225
-	1    0    0    -1  
-$EndComp
-$Comp
-L SN74LVC1G14 U3
-U 1 1 57FE78B8
-P 1875 5200
-F 0 "U3" H 1875 5300 60  0000 C CNN
-F 1 "SN74LVC1G14" H 1875 5150 60  0000 C CNN
-F 2 "MyKiCadParts:SOT-23-5-80" H 1875 5200 60  0001 C CNN
-F 3 "" H 1875 5200 60  0000 C CNN
-	1    1875 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L PCF2129AT U5
-U 1 1 57FE8569
-P 1900 5550
-F 0 "U5" H 1900 5500 60  0000 C CNN
-F 1 "PCF2129AT" H 1850 5650 60  0000 C CNN
-F 2 "MyKiCadParts:SOIC-20_7.5x12.8mm_Pitch1.27mm-80" H 1900 5550 60  0001 C CNN
-F 3 "" H 1900 5550 60  0000 C CNN
-	1    1900 5550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -309,7 +287,7 @@ L R R9
 U 1 1 5801111C
 P 3475 6100
 F 0 "R9" V 3555 6100 50  0000 C CNN
-F 1 "100K" V 3475 6100 50  0000 C CNN
+F 1 "10K" V 3475 6100 50  0000 C CNN
 F 2 "Capacitors_SMD:C_1206" V 3405 6100 50  0001 C CNN
 F 3 "" H 3475 6100 50  0000 C CNN
 	1    3475 6100
@@ -373,7 +351,7 @@ L C C1
 U 1 1 58013CF1
 P 3475 1425
 F 0 "C1" H 3500 1525 50  0000 L CNN
-F 1 "1uF" H 3500 1325 50  0000 L CNN
+F 1 "10uF" H 3500 1325 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 3513 1275 50  0001 C CNN
 F 3 "" H 3475 1425 50  0000 C CNN
 	1    3475 1425
@@ -659,12 +637,7 @@ V33
 Text GLabel 7275 3150 1    60   Input ~ 0
 5V_IN
 Wire Wire Line
-	6775 3100 6775 3200
-Wire Wire Line
-	6675 3150 6975 3150
-Wire Wire Line
-	6975 3150 6975 3250
-Connection ~ 6775 3150
+	6975 2750 6975 3250
 Wire Wire Line
 	6775 3500 6775 3550
 Wire Wire Line
@@ -748,7 +721,7 @@ Wire Wire Line
 	9725 3975 9775 3975
 Wire Wire Line
 	9725 4125 9775 4125
-Text GLabel 9775 3825 2    60   Input ~ 0
+Text GLabel 9725 3825 2    60   Input ~ 0
 GND
 $Comp
 L R R8
@@ -854,24 +827,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 3075 2350 3125
 $Comp
-L R R20
-U 1 1 58036BD3
-P 6775 2950
-F 0 "R20" V 6855 2950 50  0000 C CNN
-F 1 "0" V 6775 2950 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 6705 2950 50  0001 C CNN
-F 3 "" H 6775 2950 50  0000 C CNN
-	1    6775 2950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6775 2700 6775 2800
-Wire Wire Line
-	6675 3150 6675 2750
-Wire Wire Line
-	6675 2750 6775 2750
-Connection ~ 6775 2750
-$Comp
 L R R21
 U 1 1 580EDD4C
 P 5250 3550
@@ -897,4 +852,9 @@ Text GLabel 5400 3700 2    60   Input ~ 0
 GND
 Text GLabel 5400 3550 2    60   Input ~ 0
 V33
+Wire Wire Line
+	6775 3200 6775 2700
+Wire Wire Line
+	6975 2750 6775 2750
+Connection ~ 6775 2750
 $EndSCHEMATC
